@@ -1,0 +1,45 @@
+header {
+  text-align: center;
+  display: flex;
+  margin: 20px;
+  align-items: center;
+}
+
+.navMenu {
+  width: 800px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+}
+
+.navMenu a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  margin: 0 10px;
+  border: 1px solid transparent;
+  color: black;
+}
+
+.navMenu a:hover {
+  color: #575756;
+  border: 1px solid #575756;
+}
+
+.navMenu a.active {
+  color: #575756;
+  border: 1px solid #575756;
+}
+
+h1 {
+  font-size: 40px;
+}
+header img {
+  width: 320px;
+  height: auto;
+}

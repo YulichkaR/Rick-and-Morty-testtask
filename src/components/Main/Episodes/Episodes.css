@@ -1,0 +1,21 @@
+.episodes {
+    display: flex;
+}
+
+.left-menu {
+    width: 350px;
+    margin: 0 auto;
+    flex: 0 1 300px;
+}
+
+.episode-info {
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.episode-info  h4 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.5em;
+}

@@ -4,10 +4,10 @@ import "./Filters.css";
 interface FilterButtonProps {
   value: string;
   onClick: () => void;
-  isActive: boolean;
+  isActive?: boolean;
 }
 
-const FilterButton: React.FC<FilterButtonProps> = ({
+export const FilterButton: React.FC<FilterButtonProps> = ({
   value,
   onClick,
   isActive,
@@ -26,24 +26,17 @@ interface FiltersProps {
     status: string;
     gender: string;
     species: string;
-    sortBy?: { field: string; order: string };
   };
   setFilters: React.Dispatch<
     React.SetStateAction<{
       status: string;
       gender: string;
       species: string;
-      sortBy?: { field: string; order: string };
     }>
   >;
-  handleSortChange: any;
 }
 
-const Filters: React.FC<FiltersProps> = ({
-  filters,
-  setFilters,
-  handleSortChange,
-}) => {
+const Filters: React.FC<FiltersProps> = ({ filters, setFilters }) => {
   const handleFilterChange = (filterType: string, value: string | null) => {
     setFilters((prevFilters) => ({
       ...prevFilters,
@@ -110,17 +103,6 @@ const Filters: React.FC<FiltersProps> = ({
               )
             }
             isActive={filters.species === species}
-          />
-        ))}
-      </div>
-      <h4>Sort By</h4>
-      <div>
-        {["Status"].map((field) => (
-          <FilterButton
-            key={field}
-            value={field}
-            onClick={() => handleSortChange(field)}
-            isActive={filters.sortBy?.field === field}
           />
         ))}
       </div>

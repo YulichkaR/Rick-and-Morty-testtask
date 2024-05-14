@@ -6,8 +6,9 @@ import Search from "./Search/Search";
 import Filters from "./Filters/Filters";
 import Pagination from "./Pagination/Pagination";
 import "./Characters.css";
+import Sort from "./Sort/Sort";
 
-interface Character {
+export interface Character {
   id: number;
   name: string;
   status: string;
@@ -52,25 +53,22 @@ const Characters: React.FC = () => {
     return <CharacterCard props={character} key={character.id} />;
   });
   console.log(characters);
-  const handleSortChange = (field: string) => {
-    // setCharacters(
-    //   characters.sort((a: any, b: any) => (a.name > b.name ? 1 : -1))
-    // );
-    const sortedCharacters = [...characters].sort((a: any, b: any) =>
-      a[field] > b[field] ? 1 : -1
-    );
-    setCharacters(sortedCharacters);
-  };
+  // const handleSortChange = (field: string) => {
+  //   // setCharacters(
+  //   //   characters.sort((a: any, b: any) => (a.name > b.name ? 1 : -1))
+  //   // );
+  //   const sortedCharacters = [...characters].sort((a: any, b: any) =>
+  //     a[field] > b[field] ? 1 : -1
+  //   );
+  //   setCharacters(sortedCharacters);
+  // };
   return (
     <>
       <div className="container">
         <div className="utils">
           <Search setTextSearch={setTextSearch} />
-          <Filters
-            filters={filters}
-            setFilters={setFilters}
-            handleSortChange={handleSortChange}
-          />
+          <Filters filters={filters} setFilters={setFilters} />
+          <Sort characters={characters} setCharacters={setCharacters} />
         </div>
         {characters.length > 0 && !errorMessage && (
           <div className="cards">{cards}</div>

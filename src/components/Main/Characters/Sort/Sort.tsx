@@ -20,7 +20,7 @@ const Sort: React.FC<SortProps> = ({ characters, setCharacters }) => {
 
   return (
     <div className="filters">
-      <h4>Sort By</h4>
+      <h4 className="filters__title">Sort By</h4>
       <div>
         {["Name"].map((field) => (
           <FilterButton

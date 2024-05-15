@@ -1,20 +1,14 @@
 .cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 5px;
-    grid-row-gap: 40px;
-    flex: 1;
+  @apply grid grid-cols-4 gap-x-5 gap-y-40 flex-1;
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
-}
-.utils {
-    max-width: 300px;
+  @apply flex flex-row;
 }
 
+.utils {
+  max-width: 300px;
+}
 .error {
-    margin: auto;
-    font-size: 40px;
+  @apply mx-auto text-4xl;
 }

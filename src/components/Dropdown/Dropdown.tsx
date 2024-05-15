@@ -1,6 +1,5 @@
 import React from "react";
 import "./Dropdown.css";
-
 interface DropdownProps {
   elements: JSX.Element[];
   currentElementNumber: number;
@@ -24,6 +23,7 @@ const Dropdown: React.FC<DropdownProps> = ({
           onClick={() => {
             setOpen(!open);
           }}
+          className="w-full text-center h-12 mt-0 ml-4"
         >{`${buttonName} - ${currentElementNumber}`}</button>
         {open ? <ul className="menu">{elements}</ul> : null}
       </div>

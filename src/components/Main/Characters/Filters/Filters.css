@@ -1,34 +1,16 @@
-.filters div {
-  margin-left: 20px;
-  display: flex;
-  flex-wrap: wrap;
+.filters > div {
+  @apply ml-6 flex flex-wrap;
 }
 
-button {
-  background-color: white;
-  font-size: 18px;
-  font-weight: 100;
+.Button {
+  @apply font-sans border border-gray-400 border-solid font-normal text-lg text-gray-700 uppercase tracking-wide leading-none border-opacity-100 hover:bg-gray-200 active:bg-gray-700 m-1 p-2;
   color: #575756;
-  border: 1px solid #575756;
-  color: rgba(87, 87, 86, 0.8);
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  line-height: 18px;
-  margin: 10px 10px;
-  cursor: pointer;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none;
 }
-h4 {
-    margin-left: 30px;
-    margin-bottom: 0;
+
+.filters__title {
+  @apply font-bold text-xl ml-6 mb-0 py-4;
 }
 
 button.active {
-    background-color: rgb(34, 34, 34);
-    color: white;
+  @apply bg-gray-900 text-white;
 }

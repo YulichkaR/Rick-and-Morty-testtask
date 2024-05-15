@@ -64,7 +64,7 @@ const Episodes: React.FC = () => {
     return <CharacterCard props={character} key={index} />;
   });
 
-  const options = [...Array(52).keys()].map((index) => {
+  const options = [...Array(51).keys()].map((index) => {
     return (
       <li key={index} value={index + 1}>
         <button

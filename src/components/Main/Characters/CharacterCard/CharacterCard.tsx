@@ -27,7 +27,7 @@ const CharacterCard: React.FC<{ props: CharacterProps }> = ({ props }) => {
             {props.status}
           </span>
         </div>
-        <div className={`flip-card-back `}>
+        <div className={`flip-card-back`}>
           <div className="content">
             <p>Name: {props.name}</p>
             <p>Last location: {props.location?.name}</p>

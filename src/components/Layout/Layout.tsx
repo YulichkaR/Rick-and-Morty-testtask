@@ -10,7 +10,7 @@ const Layout: React.FC = () => {
   return (
     <>
       <header>
-        <img src={logo} alt="logo" />
+        <img className="logo" src={logo} alt="logo" />
         <nav className="navMenu">
           <Link to="/" className={location === "/" ? "active" : ""}>
             Characters

@@ -1,25 +1,13 @@
 .paginate {
-  list-style: none;
-  display: flex;
+  @apply list-none flex justify-center space-x-5;
   width: fit-content;
   margin: 40px auto;
 }
 
 .paginate li {
-  font-size: 18px;
-  border: 1px solid #575756;
-  color: #575756;
-  margin: 5px;
-  padding: 5px;
-  cursor: pointer;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none;
+  @apply text-base border border-gray-500 text-gray-500 px-3 py-1 hover:bg-gray-100 cursor-pointer;
 }
 
 .paginate .selected {
-  background-color: #02b1c8;
+  @apply bg-blue-500 text-white;
 }

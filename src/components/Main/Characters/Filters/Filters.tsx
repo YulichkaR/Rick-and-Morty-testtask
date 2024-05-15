@@ -15,7 +15,7 @@ export const FilterButton: React.FC<FilterButtonProps> = ({
   const buttonClass = isActive ? "active" : "";
 
   return (
-    <button className={buttonClass} onClick={onClick}>
+    <button className={`Button ${buttonClass}`} onClick={onClick}>
       {value}
     </button>
   );
@@ -46,9 +46,9 @@ const Filters: React.FC<FiltersProps> = ({ filters, setFilters }) => {
 
   return (
     <div className="filters">
-      <h4>Status</h4>
+      <h4 className="filters__title">Status</h4>
       <div>
-        {["alive", "dead", "unknown"].map((status) => (
+        {["Alive", "Dead", "Unknown"].map((status) => (
           <FilterButton
             key={status}
             value={status}
@@ -62,9 +62,9 @@ const Filters: React.FC<FiltersProps> = ({ filters, setFilters }) => {
           />
         ))}
       </div>
-      <h4>Gender</h4>
+      <h4 className="filters__title">Gender</h4>
       <div>
-        {["male", "female", "genderless", "unknown"].map((gender) => (
+        {["Male", "Female", "Genderless", "Unknown"].map((gender) => (
           <FilterButton
             key={gender}
             value={gender}
@@ -78,7 +78,7 @@ const Filters: React.FC<FiltersProps> = ({ filters, setFilters }) => {
           />
         ))}
       </div>
-      <h4>Species</h4>
+      <h4 className="filters__title">Species</h4>
       <div>
         {[
           "Human",
